@@ -1,0 +1,25 @@
+{
+  "name": "es6-mocha-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "src": "src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test-inline-mocha-opts": "mocha '/src/**/*.spec.js' --recursive --require babel-core/register --require babel-polyfill",
+    "test": "mocha --opts mocha.opts",
+    "testw": "npm test -- --watch",
+    "testwslow": "env SPEED=500 npm test -- -t 10000"
+  },
+  "author": "Neil Russell <neilrussell6@gmail.com> (http://neilrussell.co.za)",
+  "license": "ISC"
+}
